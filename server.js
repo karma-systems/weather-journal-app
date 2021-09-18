@@ -27,3 +27,19 @@ function listening(){
     console.log("server running"); 
     console.log(`running on localhost: ${port}`);
 }
+// Initialize all route with a callback function
+// GET route
+app.get('/all', sendData);
+// Callback function to complete GET '/all'
+function sendData (req, res) {
+    res.send(projectData);
+  };
+// Post Route
+app.post('/add', postData);
+
+// POST an Weather Data
+function postData(req,res){
+  projectData = req.body;
+  console.log(projectData);
+  res.send(projectData);
+};
