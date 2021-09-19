@@ -1,112 +1,195 @@
-body{
+*
+{
+   box-sizing: border-box;  
+   padding: 0;
+   margin: 0;
+}
+
+html{
+    height: 100%;
+}
+
+body
+{
     background: rgb(136, 193, 203);
-    background: linear-gradient(0deg, rgb(0, 9, 51) 0%, rgb(111, 195, 228) 100%);
-    margin: 0;
+    background: linear-gradient(0deg, rgb(0, 4, 24) 0%, rgb(198, 230, 230) 100%);
+    
+}
+
+.CN
+{
+    border-radius:1.5px; 
+    margin: 20px;
+    padding: 20px;
+    background-color: rgb(156, 231, 231);
+    align-content: center;
+    font-family: 'Merriweather', serif;
+    border-radius: 15px;
+}
+
+.holderheadline
+{
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    font-size: 3em;
+}
+
+#zip
+{
+    display: block;
+    margin: auto;
+    padding: 10px;
+    width: 35em;
+    height: 3em;
+    background-color: #00060C;
+    opacity: 75%;
+    border-radius: 25px;
+    border: none;
     color: #fff;
+    font-size: 1em;
+    text-align: center;
 }
 
-#app{
-    display: grid;
-    grid-auto-rows: minmax(150px, auto);
-    /* grid-template-columns:  */
-    height:100vh;
-    color: #f0d43a;
-    justify-content: center;
-    grid-gap: 1em;
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
+#feelings
+{
+    display: block;
+    margin: auto;
+    width: 30em;
+    padding: 20px;
+    margin-top: 15px;
+    background-color: #00060C;
+    opacity: 70%;
+    border-radius: 25px;
+    border: none;
+    color: #fff;
+    font-size: 2em;
 }
 
-.holder{
-
-}
-
-.entry{
-    background: rgba(59, 74, 107, .4);
-}
-
-#entryHolder{
-
-}
-
-#date{
-
-}
-
-#temp{
-
-}
-
-#content{
-
-}
-
-.headline {
-
-}
-.title{
-
-}
-
-/*  Basic Styling To Override Default For Basic HTML Elements */
+.holder-zip
 label{
-    display:block;
-    font-size: 27px;
+    padding: 5px;
+    display: grid;
+    font-family: "Comic Sans MS", cursive, sans;
+    text-align: center;
+    font-size: 1.2em;
 }
 
-input{
-    display:block;
-    height: 60px;
-    width: 320px;
-    background:#22b2da;
-    color: #f0d43a;
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
+#country
+{
+    display: block;
+    margin: auto;
+    padding: 10px;
+    color: #fff;
+    margin-top: 10px;
+    width: 28em;
+    height: 3em;
+    background-color: #00060C;
+    opacity: 75%;
+    border-radius: 25px;
     border: none;
+    font-size: 1em;   
+    text-align: center;
 }
 
-button{
-    width: 400px;
-    height: 100px;
-    background: #3b4a6b;
-    color: #f0d43a;
-    font-size: 26px;
-    font-family: 'Oswald', sans-serif;
-    border: none;
-    box-shadow: 2px 4px 5px #444;
+#generate
+{
+    display: block;
+    margin: auto;
+    margin-bottom: 25px;
+    margin-top: 20px;
+    padding: 10px;
+    width: 17em;
+    color: #fff;
+    background-color: #00060C;
+    border-radius: 15px;
+    border: none; 
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.3em;
 }
-h1{
-    font-size: 36px;
+#generate:hover{
+    background-color: cyan;
+    color: rgb(1, 1, 22);
+}
+.title
+{
+    text-align: center;
+    font-family: "Comic Sans MS", cursive, sans;
+    padding-top: 10px;
+    font-size: 2em;
+}
+.holder-entry
+{
+    margin: auto;
+    width: 60%;
+    padding: 40px;
+    padding-left: 60px;
+    background-color: #000;
+    opacity: 75%;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1.2em;
+
+}
+#date{
+    color: red; 
+    font-weight: bold;  
+}
+#city{
+    font-size: 4em;
+    display: inline;
+    float: right;
 }
 
-textarea{
-    background:#22b2da;
-    color: #f0d43a;
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
+#date #city #temp #pressure #Humidity #content {
+    font-family: "Comic Sans MS", cursive, sans;
+    text-align: center;
+    margin: 20px;
 }
-/* Reset style for HTML element on active to have no border*/
-input:focus,
-select:focus,
-textarea:focus,
-button:focus {
-    outline: none;
+
+span{
+    color: red;
+    align-content: center;
+    text-align: center;
+    border-radius: 15px;
+    display: block;
+    margin: auto;
+    font-size: 1.2em;
+    width: 50%;
+    background-color: lightgray;
 }
-/* Style for Placeholder Text*/
-::placeholder { /* Firefox, Chrome, Opera */ 
-    color: #f0d43a; 
-    font-family: 'Oswald', sans-serif;
 
-} 
-  
-:-ms-input-placeholder { /* Internet Explorer 10-11 */ 
-    color: #f0d43a; 
-    font-family: 'Oswald', sans-serif;
+@media only screen and (max-width: 35em){
+    .holderheadline {
+        font-size: 1.5em;
+    }
+    #zip {
+        width: 15em;
+        font-size: 1em;
+    }
+    #country {
+        width: 12em;
+        font-size: 1em;
+    }
+    #feelings {
+        width: 25em;
+        font-size: 1.2em;
+    }
+    #generate {
+        width: 12em;
+        font-size: 1em;
+    }
+    #date #city #temp #pressure #Humidity #content {
+        font-size: 0.7em;
+    }
+    #city {
+        font-size: 2em;
+        float: none;
+    }
+    
+    .holder-entry{
+        font-size: 1em;
+        width: 90%;
+    }
 
-} 
-  
-::-ms-input-placeholder { /* Microsoft Edge */ 
-    color: #f0d43a; 
-    font-family: 'Oswald', sans-serif;
-
-} 
+}

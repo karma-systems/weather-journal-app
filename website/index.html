@@ -2,30 +2,47 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<div></div>
 <title>Weather Journal</title>
 <link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
- <body>
+ <body >
 <div id = "app">
-  <div class ="holder headline">
+  <div class="CN">
+  <div class ="holderheadline">
     Weather Journal App
   </div>
-  <div class ="holder zip">
-    <label for="zip">Enter Zipcode here</label>
-    <input type="text" id="zip" placeholder="enter zip code here" >
   </div>
+  <div class ="holder-zip" >
+    <label for="zip">Enter City Zip code</label>
+    <input type="text" id="zip" placeholder="Enter zip code here">
+    <span id="errorMessage"></span>
+  </div>
+  <div class ="holder-zip">
+    <label for="country">Select country code</label>
+    <select id="country" required>
+      <option name="ccode"  value="us">USA</option>
+      <option name="ccode"  value="eg">EGYPT</option>
+    </select>
+  </div>
+
   <div class ="holder feel">
-    <label for="feelings">How are you feeling today?</label>
-    <textarea class= "myInput" id="feelings" placeholder="Enter your feelings here" rows="9" cols="50" ></textarea>
-    <button id="generate" type = "submit"> Generate </button>
-  </div>
-  <div class ="holder entry">
-    <div class = "title">Most Recent Entry</div>
+    <label for="feelings"></label>
+    <textarea name="" class= "myInput" id="feelings" rows="5" cols="33" placeholder="Enter your feelings here"></textarea>
+
+    </div>
+    
+  <button id="generate" > Generate </button>
+
+<div class ="title">Most Recent Entry</div>
+  <div class ="holder-entry">
    <div id = "entryHolder">
-    <div id = "city"></div> 
     <div id = "date"></div> 
-   <div id = "temp"></div>
+    <div id = "city"></div> 
+    <div id = "temp"></div>
+    <div id = "pressure"></div> 
+   <div id = "Humidity"></div>
    <div id = "content"></div>
   </div>
   </div>
