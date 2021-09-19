@@ -20,7 +20,7 @@ function performAction(e){
     feeling =  document.getElementById('feelings').value;
     getWeatherData(zipCode, countryCode).then((data)=>{
       if(data){
-        /*Collect both user and API Data in one object*/
+        /*Collect both user and API Data in the totalData object*/
         totalData = {
           temp: Math.round(data.main.temp),
           pressure: data.main.pressure,
@@ -64,7 +64,7 @@ const postData = async ( url = '', data = {})=>{
   headers: {
       'Content-Type': 'application/json',
   },
-  body: JSON.stringify(data), // body data type must match "Content-Type" header        
+  body: JSON.stringify(data),         
 });
 
   try {
@@ -77,11 +77,12 @@ const postData = async ( url = '', data = {})=>{
   alert(`Something went wrong, Error: ${error}!`);
   }
 }
-/*Fuction to update user interface according to server fetched Data*/
+/*Fuction to Get Data from server side then update user interface according to fetched Data*/
 const updateUI = async () => {
-  const request = await fetch('/all');
+  const request = await fetch('/all');// GET Data from server side
   try{
     const dataRecord = await request.json();
+    /*Update user interface*/
     document.getElementById('date').innerHTML = `Date: ${dataRecord.date}`;
     document.getElementById('city').innerHTML = dataRecord.city;
     document.getElementById('temp').innerHTML = `Temperature: ${dataRecord.temp}&deg C`;

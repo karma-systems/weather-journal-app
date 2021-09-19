@@ -155,7 +155,7 @@ span{
     display: block;
     margin: auto;
     font-size: 1.2em;
-    width: 50%;
+    width: 20%;
     background-color: lightgray;
 }
 
@@ -191,5 +191,8 @@ span{
         font-size: 1em;
         width: 90%;
     }
-
+    
+    span{
+        width: 9em;
+    }
 }
